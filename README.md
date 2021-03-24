@@ -2,6 +2,8 @@
 
 These are my solutions to Advent of Code over the years.
 
+Each year is in its own branch.
+
 | Year | Progress | Stars |
 | ---- | -------- | ----- |
 | 2020 |   10/25  | 19/50 |
