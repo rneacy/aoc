@@ -1,11 +1,7 @@
-# Advent of Code Solutions
+# Advent of Code 2020 Solutions
 
-These are my solutions to Advent of Code over the years.
+## -- In Progress --
 
-| Year | Progress | Stars |
-| ---- | -------- | ----- |
-| 2020 |   10/25  | 19/50 |
-| 2019 |    6/25  | 12/50 |
-| 2018 |   10/25  | 19/50 |
+These are my solutions to Advent of Code 2020.
 
 They are written in **Python**.
