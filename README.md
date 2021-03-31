@@ -2,6 +2,8 @@
 
 These are my solutions to Advent of Code over the years.
 
+Not everything is complete; I use this as practice for algorithmic thinking and knowledge of new algoriths to accomplish hard computing problems.
+
 Each year is in its own branch.
 
 | Year | Progress | Stars |
