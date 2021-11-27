@@ -49,10 +49,7 @@ def invalid_sum():
 
 def determine_fields():
     v_tx = [valid for valid in filter(lambda tx: not any([check_field_valid(fld) for fld in tx]), nb_tx)]
-
     cols = [ [tx[x] for tx in v_tx] for x in range(len(v_tx[0])) ]
-
-    #print(cols)
 
     order = {i:None for i in range(len(cols))}
     left = list(set(fields) - set(order.values()))
@@ -60,8 +57,6 @@ def determine_fields():
 
     # row class seat
     while len(left) > 0:
-        #print("\n\nrestart\n\n")
-        #for col in cols:
         for x in range(len(cols)):
             if x in solved_for:
                 continue
@@ -70,21 +65,14 @@ def determine_fields():
                 order[x] = left[0]
                 break
 
-            #print(f'col = {cols[x]}')
             res = {test : all([check_field_valid_with_rule(field, test) for field in cols[x]]) for test in left}
-            #print(res)
             
-            # Inevitably there will be a column where this is not ambigious otherwise the solve is impossible
-            # Park this column for now if it satisfies more than one.
             park = list(res.values()).count(True) > 1
             if not park:
                 found = list(filter(lambda x: res[x], res))[0]
                 order[x] = found
                 solved_for.append(x)
-                #print(f"Found... {cols} , Order = {order}")
                 break
-            # else:
-            #     print("Parking")
 
         left = list(set(fields) - set(order.values()))
 
